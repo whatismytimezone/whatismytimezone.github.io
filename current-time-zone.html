@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "Current Time Zone" -->
+    <title>Current Time Zone - Live Local Time and Offset Detector</title>
+    <meta name="description" content="What is the current time zone? Discover your exact local time zone, GMT/UTC offset, and region instantly. Accurate live tracking for your device.">
+    <link rel="canonical" href="https://whatismytimezone.info/current-time-zone" />
+    
+    <!-- Link CSS (Gunakan path yang sama dengan index) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section (Identik dengan index agar jam berfungsi) -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Live Detection</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">Current Time Zone</h1>
+            <p id="hero-offset" class="hero-offset">Detecting your offset...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Definisi Teknis -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    The Anatomy of Your Current Time Zone
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Understanding your <strong>current time zone</strong> is crucial for navigating our digital world. Every device uses a specific clock signal based on its geographic coordinates or system settings. Standardized by the IANA database, these zones ensure that communication, travel, and servers stay in perfect sync across continents.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Most regions operate on an offset from <strong>UTC (Coordinated Universal Time)</strong>. Whether you are currently in EST, CET, or JST, our live detector picks up your browser's internal metadata to confirm exactly where you stand on the global clock.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Pentingnya Akurasi -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Why Real-Time Accuracy Matters
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Static time zone maps often fail to account for <strong>Daylight Saving Time (DST)</strong>. Because countries change their clocks on different dates, your current time zone might shift by one hour unexpectedly. Manual tracking is prone to error, especially during seasonal transitions.
+                    </p>
+                    <p>
+                        By using <strong>WhatIsMyTimeZone.info</strong>, you are viewing a live feed that cross-references your system clock with your browser's locale. This ensures that you are seeing the 100% correct offset right now, helping you manage international calls and deadlines without the risk of a "wrong hour" mishap.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
