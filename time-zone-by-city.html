@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "Time Zone By City" -->
+    <title>Time Zone By City - Find Local Time for Any City Worldwide</title>
+    <meta name="description" content="Looking for a time zone by city? Search and find current local time, UTC offsets, and IANA identifiers for major cities globally with our live tracking tool.">
+    <link rel="canonical" href="https://whatismytimezone.info/time-zone-by-city" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">City Search</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">Time Zone By City</h1>
+            <p id="hero-offset" class="hero-offset">Browse global city times...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Mengapa Mencari Berdasarkan Kota? -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Finding the Right Time Zone by City
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Searching for a <strong>time zone by city</strong> is the most intuitive way to handle international scheduling. While countries can span multiple zones, cities provide a definitive reference point. For example, knowing the time zone for <em>New York</em> is much more precise than just looking for the United States, which covers six different time zones.
+                    </p>
+                    <p>
+                        Our database utilizes the <strong>IANA Time Zone Database</strong>, the gold standard used by computer systems worldwide. By selecting or searching for a specific city, you get the most accurate local time, accounting for regional laws and specific municipal clock changes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Navigasi Antar Zona -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Global City Synchronization
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        When you track <strong>time zones by city</strong>, you also gain insight into <strong>Daylight Saving Time (DST)</strong> status. Many cities in Europe or North America shift their clocks twice a year, while cities in Asia or Africa may not. 
+                    </p>
+                    <p>
+                        With <strong>WhatIsMyTimeZone.info</strong>, you can build your own customized city list. Simply use our city selector to add major hubs like <em>London, Tokyo, or Dubai</em> to your dashboard. Our live-sync technology ensures that every city card updates every second, providing you with a reliable window into the local life of any metropolitan area on Earth.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
