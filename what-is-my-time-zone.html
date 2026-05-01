@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tag Super SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is My Time Zone? - Instant Local Time & UTC Offset Detector</title>
+    <meta name="description" content="Wondering 'what is my time zone'? Get instant detection of your current time zone, UTC offset, and local time with high accuracy. No setup required.">
+    <link rel="canonical" href="https://whatismytimezone.info/what-is-my-time-zone" />
+    
+    <!-- Link CSS Anda (Sesuaikan path jika perlu) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- RE-USE YOUR APP COMPONENT (Hero Card & Diagnostics) -->
+    <!-- Ini penting agar user tetap mendapatkan fungsionalitas utamanya -->
+    
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Live Detection</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">What Is My Time Zone?</h1>
+            <p id="hero-offset" class="hero-offset">Detecting your location...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- Google AdSense Placeholder -->
+    <div class="adsense-wrapper">
+        <div class="adsense-placeholder">Google AdSense Banner</div>
+    </div>
+
+    <!-- SEO CONTENT STRATEGY - THE DEEP DIVE ARTICLE -->
+    <section class="seo-post-container" style="max-width: 850px; margin: 0 auto; line-height: 1.8;">
+        
+        <article style="background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 3rem; box-shadow: var(--shadow);">
+            <h2 style="font-size: 2.5rem; color: #000; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -1px;">
+                Everything You Need to Know About Your Current Time Zone
+            </h2>
+            
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                If you have ever found yourself asking, <strong>"What is my time zone?"</strong>, you are not alone. In an era of global connectivity, understanding your position relative to the world's time standards is essential for everything from business meetings to online gaming. This page provides a real-time answer by detecting your system's locale settings instantly.
+            </p>
+
+            <h3 style="font-size: 1.8rem; color: #000; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+                What Does "Time Zone" Actually Mean?
+            </h3>
+            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                A time zone is a region of the globe that observes a uniform standard time for legal, commercial, and social purposes. Most time zones are defined by an offset from <strong>Coordinated Universal Time (UTC)</strong>. For example, if you are in London during the winter, you are at UTC+0, while someone in New York is at UTC-5.
+            </p>
+
+            <h3 style="font-size: 1.8rem; color: #000; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+                How Our Tool Detects Your Time Zone
+            </h3>
+            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Unlike other tools that rely solely on your IP address (which can be inaccurate if you use a VPN), <strong>WhatIsMyTimeZone.info</strong> queries your browser's internal clock API. This provides the most accurate <strong>IANA Time Zone ID</strong> (e.g., <em>America/Los_Angeles</em>) and accounts for <strong>Daylight Saving Time (DST)</strong> changes automatically.
+            </p>
+
+            <div style="background: var(--bg); border-radius: 16px; padding: 2rem; border-left: 5px solid var(--primary); margin: 2rem 0;">
+                <h4 style="color: #000; margin-bottom: 0.5rem; font-weight: 700;">Quick Fact:</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">
+                    There are currently over 38 different local time zones in use worldwide. Some countries, like India or Nepal, use offsets that are 30 or 45 minutes apart from the standard hour intervals!
+                </p>
+            </div>
+
+            <h3 style="font-size: 1.8rem; color: #000; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+                Common Time Zone Abbreviations
+            </h3>
+            <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 2rem;">
+                <li><strong>GMT:</strong> Greenwich Mean Time</li>
+                <li><strong>EST:</strong> Eastern Standard Time (UTC-5)</li>
+                <li><strong>CET:</strong> Central European Time (UTC+1)</li>
+                <li><strong>JST:</strong> Japan Standard Time (UTC+9)</li>
+            </ul>
+
+            <p style="font-size: 1rem; color: var(--text-muted); font-style: italic;">
+                Stay updated and never miss a beat. By knowing exactly "what is my time zone", you can master your schedule and coordinate globally with confidence.
+            </p>
+        </article>
+
+    </section>
+
+    <!-- Footer Otomatis -->
+    <footer style="text-align: center; padding: 4rem 1.5rem; border-top: 1px solid var(--border); margin-top: 4rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">
+            &copy; <span id="current-year"></span> <strong>WhatIsMyTimeZone.info</strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Load Script Utama Anda -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
