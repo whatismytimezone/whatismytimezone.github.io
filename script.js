@@ -1,7 +1,7 @@
 /**
- * TimeFlow Premium - Core Logic
+ * TimeFlow Premium - Core Logic (Universal Version)
  * Mengelola deteksi waktu, sistem operasi, browser, 
- * dan manajemen World Clock.
+ * dan manajemen World Clock dengan dukungan multi-halaman.
  */
 
 // 1. Konfigurasi 6 Kota Default untuk World Clock
@@ -22,33 +22,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * Helper untuk mengisi teks hanya jika elemen ada (Mencegah Error)
+ */
+function safeSetText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+}
+
+/**
  * Inisialisasi Data Diagnostik (Device, OS, Browser)
  */
 function initDiagnostics() {
     const ua = navigator.userAgent;
     
-    // 1. Time & Region
+    // 1. Time & Region Data
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const offset = new Date().getTimezoneOffset();
     const offsetHours = (offset / -60);
+    const offsetStr = `UTC ${offsetHours >= 0 ? '+' : ''}${offsetHours}:00`;
     
-    document.getElementById('val-tz').textContent = tz;
-    document.getElementById('val-offset').textContent = `UTC ${offsetHours >= 0 ? '+' : ''}${offsetHours}:00`;
-    document.getElementById('val-region').textContent = navigator.language || 'Unknown';
-    document.getElementById('hero-tz').textContent = tz.replace('_', ' ');
-    document.getElementById('hero-offset').textContent = `Local Offset: UTC ${offsetHours >= 0 ? '+' : ''}${offsetHours}:00`;
+    // Update data diagnostik (Hanya jika elemen ada di halaman tersebut)
+    safeSetText('val-tz', tz);
+    safeSetText('val-offset', offsetStr);
+    safeSetText('val-region', navigator.language || 'Unknown');
+    
+    // Update Hero Section (Ada di index & postingan)
+    const heroTz = document.getElementById('hero-tz');
+    if (heroTz && heroTz.textContent.includes("Detecting")) {
+        heroTz.textContent = tz.replace('_', ' ');
+    }
+    safeSetText('hero-offset', `Local Offset: ${offsetStr}`);
 
     // 2. Device & OS
     let os = "Unknown OS";
     if (ua.indexOf("Win") != -1) os = "Windows";
-    if (ua.indexOf("Mac") != -1) os = "MacOS";
-    if (ua.indexOf("Linux") != -1) os = "Linux";
-    if (ua.indexOf("Android") != -1) os = "Android";
-    if (ua.indexOf("like Mac") != -1) os = "iOS";
+    else if (ua.indexOf("Mac") != -1) os = "MacOS";
+    else if (ua.indexOf("Linux") != -1) os = "Linux";
+    else if (ua.indexOf("Android") != -1) os = "Android";
+    else if (ua.indexOf("like Mac") != -1) os = "iOS";
 
-    document.getElementById('val-os').textContent = os;
-    document.getElementById('val-devicetype').textContent = /Mobi|Android/i.test(ua) ? "Mobile" : "Desktop";
-    document.getElementById('val-lang').textContent = navigator.languages[0];
+    safeSetText('val-os', os);
+    safeSetText('val-devicetype', /Mobi|Android/i.test(ua) ? "Mobile" : "Desktop");
+    safeSetText('val-lang', navigator.languages[0]);
 
     // 3. Browser & Display
     let browser = "Unknown";
@@ -57,31 +72,28 @@ function initDiagnostics() {
     else if (ua.indexOf("Firefox") != -1) browser = "Firefox";
     else if (ua.indexOf("Edge") != -1) browser = "Microsoft Edge";
 
-    document.getElementById('val-browser').textContent = browser;
-    document.getElementById('val-res').textContent = `${window.screen.width} x ${window.screen.height}`;
+    safeSetText('val-browser', browser);
+    safeSetText('val-res', `${window.screen.width} x ${window.screen.height}`);
     
     const updateViewport = () => {
-        document.getElementById('val-view').textContent = `${window.innerWidth} x ${window.innerHeight}`;
+        safeSetText('val-view', `${window.innerWidth} x ${window.innerHeight}`);
     };
     window.onresize = updateViewport;
     updateViewport();
 }
 
 /**
- * Mengelola Dropdown Pemilih Kota dengan daftar zona waktu lengkap
- * (Africa/Abidjan hingga Pacific/Wallis)
+ * Mengelola Dropdown Pemilih Kota
  */
 function initFullCitySelector() {
     const selector = document.getElementById('city-selector');
+    if (!selector) return; // Keluar jika tidak ada di halaman
     
-    // Mengambil daftar zona waktu standar dari API Intl
     const allTimeZones = Intl.supportedValuesOf('timeZone');
 
     allTimeZones.forEach(tz => {
         const opt = document.createElement('option');
         opt.value = tz;
-        
-        // Mempercantik tampilan nama kota (misal: "Asia/Jakarta" -> "Jakarta")
         const cityName = tz.split('/').pop().replace(/_/g, ' ');
         opt.textContent = `${cityName} (${tz})`;
         selector.appendChild(opt);
@@ -92,12 +104,11 @@ function initFullCitySelector() {
         const tz = e.target.value;
         const name = tz.split('/').pop().replace(/_/g, ' ');
         
-        // Cek jika sudah ada agar tidak duplikat
         if (!monitoredCities.some(c => c.tz === tz)) {
             monitoredCities.push({ name, tz });
             renderClockGrid();
         }
-        e.target.value = ""; // Reset dropdown
+        e.target.value = ""; 
     });
 }
 
@@ -113,29 +124,26 @@ function updateAllClocks() {
     };
     const timeParts = now.toLocaleTimeString('en-US', localTimeOptions).split(' ');
     
-    const heroHms = document.getElementById('hero-hms');
-    const heroAmpm = document.getElementById('hero-ampm');
-    const heroDate = document.getElementById('hero-date');
-
-    if (heroHms) heroHms.textContent = timeParts[0];
-    if (heroAmpm) heroAmpm.textContent = timeParts[1];
+    safeSetText('hero-hms', timeParts[0]);
+    safeSetText('hero-ampm', timeParts[1]);
     
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    if (heroDate) heroDate.textContent = now.toLocaleDateString('en-US', dateOptions);
+    safeSetText('hero-date', now.toLocaleDateString('en-US', dateOptions));
 
-    // 2. Update World Clock Grid
-    renderClockGrid();
+    // 2. Update World Clock Grid (Hanya jika elemen grid ada)
+    if (document.getElementById('clock-grid')) {
+        renderClockGrid();
+    }
 }
 
 /**
  * Me-render kartu jam dunia ke dalam grid
- * Perbaikan: Struktur HTML memastikan tombol X sejajar horizontal dengan jam
  */
 function renderClockGrid() {
     const grid = document.getElementById('clock-grid');
     if (!grid) return;
     
-    grid.innerHTML = ''; // Clear grid
+    grid.innerHTML = ''; 
 
     monitoredCities.forEach((city, index) => {
         const cityTime = new Date().toLocaleTimeString('en-US', {
