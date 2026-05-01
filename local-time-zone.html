@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "Local Time Zone" -->
+    <title>Local Time Zone - Live Offset & Regional Time Detector</title>
+    <meta name="description" content="What is your local time zone? Check your exact region, UTC/GMT offset, and current time instantly. Automated detection for any device and location.">
+    <link rel="canonical" href="https://whatismytimezone.info/local-time-zone" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Live View</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">Local Time Zone</h1>
+            <p id="hero-offset" class="hero-offset">Detecting local parameters...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Local Time vs Time Zone -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Understanding Your Local Time Zone
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Your <strong>local time zone</strong> is the specific regulatory clock setting applied to your current geographic area. While the sun might be at its peak at different times, governments establish these zones to keep social and economic activities synchronized. For instance, even if two cities are hundreds of miles apart, they may share the same local time zone for administrative convenience.
+                    </p>
+                    <p>
+                        Our tool identifies this setting by looking at your browser's <strong>locale environment</strong>. This is more accurate than IP geolocation because it shows the time your computer is actually following, ensuring that your calendar invites and system logs are always consistent.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Global Standards -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    The Role of UTC in Local Timing
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Every <strong>local time zone</strong> is defined by its relationship to UTC (Coordinated Universal Time). When you travel or work with international teams, you'll often see these expressed as offsets, such as <em>UTC+7</em> or <em>UTC-3</em>. 
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        It is important to remember that local time zones can change due to political decisions or seasonal <strong>Daylight Saving</strong> adjustments. By using a live detector like <strong>WhatIsMyTimeZone.info</strong>, you remove the guesswork and get the real-time data provided directly by your operating system's latest time zone database (TZDB).
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
