@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "Detect my IANA time zone" -->
+    <title>Detect My IANA Time Zone - Instant TZ Database ID Finder</title>
+    <meta name="description" content="Need to detect your IANA time zone? Get your official TZ database name instantly. Perfect for developers and travelers needing precise regional identifiers.">
+    <link rel="canonical" href="https://whatismytimezone.info/detect-my-iana-time-zone" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Database Lookup</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">Detect My IANA Time Zone</h1>
+            <p id="hero-offset" class="hero-offset">Querying TZDB string...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Apa itu IANA? -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Understanding the IANA Identifier
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        When you <strong>detect your IANA time zone</strong>, you are fetching a standardized string (like <em>Europe/Berlin</em>) from the Internet Assigned Numbers Authority database. This is far more useful than a simple offset (like UTC+1) because IANA identifiers contain the entire history of local time changes, including complex <strong>Daylight Saving Time</strong> transitions specific to that region.
+                    </p>
+                    <p>
+                        Software developers rely on these IDs to ensure that timestamps are stored and displayed correctly across different platforms, preventing the dreaded "off-by-one-hour" errors in global applications.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Cara Kerja Deteksi -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    How We Detect Your TZ Database ID
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Our <strong>IANA time zone detector</strong> uses the <em>Intl.DateTimeFormat().resolvedOptions().timeZone</em> JavaScript method. This API is built into every modern web browser and provides a direct link to your Operating System's regional settings. 
+                    </p>
+                    <p>
+                        This method is incredibly privacy-friendly; it doesn't need to know your GPS coordinates or your street address. It simply asks the browser: "What is the official name of the clock rules you are currently following?" By using <strong>WhatIsMyTimeZone.info</strong>, you get this technical data instantly, formatted and ready for use in your projects or travel plans.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
