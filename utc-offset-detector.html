@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "UTC Offset Detector" -->
+    <title>UTC Offset Detector - Accurate Coordinated Universal Time Tracker</title>
+    <meta name="description" content="Instant UTC offset detector. Find your exact Coordinated Universal Time difference, IANA time zone ID, and local offset with high precision and zero lag.">
+    <link rel="canonical" href="https://whatismytimezone.info/utc-offset-detector" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Technical Precision</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">UTC Offset Detector</h1>
+            <p id="hero-offset" class="hero-offset">Calculating UTC difference...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Definisi UTC Offset -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    What is a UTC Offset?
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        A <strong>UTC offset</strong> is the difference in hours and minutes from Coordinated Universal Time (UTC) for a particular place and date. It is generally shown in the format <em>±[hh]:[mm]</em>. Using a reliable <strong>UTC offset detector</strong> is crucial because it helps identify the standard time of a region without the confusion of local naming conventions.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        While UTC is the primary time standard by which the world regulates clocks and time, it is not a time zone itself. Instead, it is a high-precision atomic time scale that serves as the basis for civil timekeeping globally.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Pentingnya Deteksi Berbasis Browser -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    The Accuracy of Our Detection Logic
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Most tools guess your offset using IP addresses, which can be inaccurate due to VPNs or proxy servers. Our <strong>UTC Offset Detector</strong> utilizes the <em>getTimezoneOffset()</em> method from your browser's local environment. This ensures that the offset you see is exactly what your operating system is using to timestamp your files and emails.
+                    </p>
+                    <p>
+                        This precision is vital for programmers managing cron jobs, database logs, and synchronization protocols. By visiting <strong>WhatIsMyTimeZone.info</strong>, you get an instant, script-based verification of your current temporal position relative to the zero meridian.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
