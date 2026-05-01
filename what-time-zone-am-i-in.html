@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "What time zone am I in" -->
+    <title>What Time Zone Am I In? - Real-Time Detection & Clock</title>
+    <meta name="description" content="Stop wondering 'what time zone am I in'. Get an instant, automated answer based on your device settings. See your current offset, IANA ID, and local time.">
+    <link rel="canonical" href="https://whatismytimezone.info/what-time-zone-am-i-in" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Instant Answer</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">What Time Zone Am I In?</h1>
+            <p id="hero-offset" class="hero-offset">Scanning system locale...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Jawaban Langsung -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    The Fastest Way to Answer: "What Time Zone Am I In?"
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        If you are asking yourself <strong>"what time zone am I in"</strong>, you likely need a quick answer for a meeting, a deadline, or travel planning. Instead of looking at complex maps, our tool reads the <strong>System Time Zone</strong> directly from your device. This is the most reliable method because it reflects the actual time your computer or smartphone is using to process data.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Modern browsers store this information in the <em>Intl.DateTimeFormat</em> object, which allows us to display your specific region (like <em>Europe/Paris</em> or <em>Asia/Jakarta</em>) and your exact hour offset from UTC without requiring you to share your GPS location.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Mengapa Penting Cek Berkala -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Does My Time Zone Change Automatically?
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        Yes and no. While most smartphones update via network towers, laptops often rely on manual settings or Wi-Fi signals. If you are using a <strong>VPN (Virtual Private Network)</strong>, your IP address might say you are in one country, while your system clock says another. 
+                    </p>
+                    <p>
+                        This "mismatch" can cause errors in website displays or scheduling apps. By visiting <strong>WhatIsMyTimeZone.info</strong>, you can verify if your browser is leaking a different time zone than intended, which is a key part of maintaining your digital privacy and ensuring your global presence is accurately represented.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
