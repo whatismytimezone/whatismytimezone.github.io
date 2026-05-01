@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WhatIsMyTimeZone.info</title>
+    <meta name="description" content="Learn more about WhatIsMyTimeZone.info, our mission to provide precision global time data, and the technology behind our real-time detection tools.">
+    <link rel="canonical" href="https://whatismytimezone.info/about" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">Our Mission</span>
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">About Us</h1>
+            <p class="hero-offset">Precision. Accuracy. Global Connectivity.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="seo-content-section" style="margin-top: 3rem; padding-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+        
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 25px; padding: 2.5rem; box-shadow: var(--shadow);">
+            
+            <h2 style="font-weight: 800; color: #000; margin-bottom: 1.5rem;">Who We Are</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                <strong>WhatIsMyTimeZone.info</strong> was founded with a simple yet essential goal: to eliminate the confusion caused by global time differences. In an era of remote work, international travel, and 24/7 digital connectivity, knowing the exact time and offset is no longer a luxury—it's a necessity.
+            </p>
+
+            <h2 style="font-weight: 800; color: #000; margin-bottom: 1.5rem;">Our Technology</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                Unlike many tools that rely on imprecise IP-based geolocation, our platform utilizes high-performance <strong>browser-level detection</strong> and the <strong>IANA Time Zone Database</strong>. This ensures that the data you see is pulled directly from your device's operating system, providing a "ground truth" that remains accurate even if you are using a VPN or traveling across borders.
+            </p>
+
+            <div style="background: #f8f9fa; border-radius: 15px; padding: 1.5rem; margin: 2rem 0; border-left: 5px solid var(--accent);">
+                <h3 style="margin-top: 0; font-weight: 700;">What We Provide:</h3>
+                <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;">✅ Instant UTC/GMT Offset Detection</li>
+                    <li style="margin-bottom: 0.5rem;">✅ Real-time World Clock Synchronization</li>
+                    <li style="margin-bottom: 0.5rem;">✅ Detailed IANA Time Zone Identifiers</li>
+                    <li style="margin-bottom: 0.5rem;">✅ Technical Device Audits (Resolution & DPI)</li>
+                </ul>
+            </div>
+
+            <h2 style="font-weight: 800; color: #000; margin-bottom: 1.5rem;">Privacy First</h2>
+            <p style="color: var(--text-muted);">
+                We value your privacy. <strong>WhatIsMyTimeZone.info</strong> does not track your GPS location, store your personal data, or use invasive cookies. Our tools are designed to be lightweight, fast, and secure, serving the global community of developers, travelers, and professionals with integrity.
+            </p>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" style="display: inline-block; background: var(--accent); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: transform 0.2s;">
+                    Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
