@@ -182,3 +182,32 @@ window.removeCity = function(index) {
     monitoredCities.splice(index, 1);
     renderClockGrid();
 };
+// 1. Menonaktifkan Klik Kanan (Context Menu)
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+}, false);
+
+// 2. Menonaktifkan "Select All" dan Seleksi Teks
+document.addEventListener('keydown', function(e) {
+    // Menghalangi Ctrl+A atau Command+A
+    if ((e.ctrlKey || e.metaKey) && e.keyCode === 65) {
+        e.preventDefault();
+    }
+    
+    // 3. Menghalangi "View Source" (Ctrl+U)
+    if ((e.ctrlKey || e.metaKey) && e.keyCode === 85) {
+        e.preventDefault();
+    }
+
+    // 4. Menghalangi Inspect Element (F12, Ctrl+Shift+I, Ctrl+Shift+J)
+    if (e.keyCode === 123 || 
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74))) {
+        e.preventDefault();
+    }
+}, false);
+
+// 5. Tambahan CSS via JavaScript untuk mematikan seleksi teks secara visual
+document.documentElement.style.userSelect = 'none';
+document.documentElement.style.webkitUserSelect = 'none';
+document.documentElement.style.msUserSelect = 'none';
+document.documentElement.style.mozUserSelect = 'none';
