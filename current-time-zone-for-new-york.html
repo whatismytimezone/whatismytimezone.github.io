@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag SEO Khusus Keyword "Current time zone for New York" -->
+    <title>Current Time Zone for New York - Live NYC Clock & Offset</title>
+    <meta name="description" content="What is the current time zone for New York? Get the exact local time in NYC, including UTC offset (EST/EDT) and Daylight Saving Time status instantly.">
+    <link rel="canonical" href="https://whatismytimezone.info/current-time-zone-for-new-york" />
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap">
+</head>
+<body>
+
+<main class="dashboard-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <span class="status-badge">NYC Standard</span>
+            <h1 id="hero-tz" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0;">New York Time Zone</h1>
+            <p id="hero-offset" class="hero-offset">Fetching Eastern Time...</p>
+            <div class="hero-main-clock">
+                <span id="hero-hms">00:00:00</span>
+                <span id="hero-ampm" class="ampm-small">--</span>
+            </div>
+            <p id="hero-date" style="opacity: 0.8;">---</p>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <div class="adsense-wrapper" style="margin: 2rem 0; text-align: center;">
+        <div style="background: #f9f9f9; border: 2px dashed #ddd; padding: 20px; border-radius: 15px; color: #999;">
+            Google AdSense Banner
+        </div>
+    </div>
+
+    <!-- SEO Content Section (Dua Kolom UI Boxes) -->
+    <section class="seo-content-section" style="margin-top: 4rem; padding-bottom: 2rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="seo-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Box 1: Detail Zona Waktu New York -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Understanding New York's Local Time
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        The <strong>current time zone for New York</strong> is officially part of the Eastern Time Zone (ET) in the United States. Depending on the time of year, NYC observes either <strong>Eastern Standard Time (EST)</strong>, which is UTC-5, or <strong>Eastern Daylight Time (EDT)</strong>, which is UTC-4.
+                    </p>
+                    <p>
+                        New York City is the primary reference point for the world's financial markets. Knowing the precise offset for NYC is essential for traders, business professionals, and travelers who need to stay synchronized with the "Big Apple." Our tool provides a live feed that accounts for seasonal shifts automatically.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Box 2: Transisi DST di NYC -->
+            <article class="seo-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #000000; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
+                    Daylight Saving in the Big Apple
+                </h2>
+                <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; flex-grow: 1;">
+                    <p style="margin-bottom: 1rem;">
+                        In New York, <strong>Daylight Saving Time</strong> begins on the second Sunday of March and ends on the first Sunday of November. During this period, the clocks move forward one hour to allow for more evening light.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        At <strong>WhatIsMyTimeZone.info</strong>, we use IANA's <em>America/New_York</em> identifier to track these changes. If you are comparing your local time to New York, our <strong>time zone converter</strong> is the best way to visualize the gap without manual calculations. Stay updated with real-time accuracy for all your global meetings.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+            &copy; <span id="current-year"></span> <strong><a href="https://whatismytimezone.info">WhatIsMyTimeZone.info</a></strong>. All Rights Reserved.
+        </p>
+    </footer>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
